@@ -1,3 +1,3 @@
 # Notes
 
-This is s simple plain text editor
+This is s simple plain text editor.
