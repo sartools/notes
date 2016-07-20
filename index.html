@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <style>
+      html, body, div {
+
+        /* view */
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      textarea {
+
+        /* text area */
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        resize: none;
+        border: none;
+        outline: none;
+
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        tab-size: 2;
+
+         /* fonts */
+        font-family: Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+        font-style: italic;
+        font-weight: 300;
+        font-size: 18px;
+
+        /* colors */
+        background-color: #282C34;
+        color: #ABB2BF;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <textarea id="editor"></textarea>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
