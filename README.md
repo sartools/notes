@@ -1,2 +1,12 @@
-# Notes
->This is s simple plain text editor.
+<h1 align="center">
+  <br>
+  <a href=""><img src="badge.svg" alt="Notes" width="200"></a>
+  <br>
+  Notes
+  <br>
+  <br>
+  a simple plain text editor.
+  <br>
+  <br>
+</h1>
+
