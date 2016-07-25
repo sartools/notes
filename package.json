@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "main": "app.js",
   "license": "MIT",
+  "repository": "Aerobird98/Notes",
 
   "scripts": {
     "start": "electron app.js",
