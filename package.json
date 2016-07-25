@@ -9,12 +9,12 @@
     "start": "electron app.js",
     "std": "standard",
 
-    "pack-64bit": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=x64 --prune --asar --icon=bundle.ico --overwrite",
-    "pack-32bit": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=ia32 --prune --asar --icon=bundle.ico --overwrite",
-    "pack-all": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=bundle.ico --overwrite"
+    "pack-64bit": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=x64 --prune --asar --icon=icon.ico --overwrite",
+    "pack-32bit": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=ia32 --prune --asar --icon=icon.ico --overwrite",
+    "pack-all": "electron-packager . Notes --appname=Notes --app-version=1.0.0 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=icon.ico --overwrite"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.2.7",
+    "electron-prebuilt": "1.2.8",
     "electron-packager": "7.3.0",
     "standard": "7.1.2"
   }
