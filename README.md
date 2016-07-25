@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href=""><img src="https://raw.githubusercontent.com/Aerobird98/Notes/master/bundle.svg" alt="Notes" width="200"></a>
+  <a href=""><img src="https://aerobird98.github.io/Notes/img/sticker.svg" alt="Notes" width="200"></a>
   <br>
   Notes
   <br>
