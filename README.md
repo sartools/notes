@@ -5,7 +5,7 @@
   Notes
   <br>
   <br>
-  a simple plain text editor.
+  a simple plain text editor written in js standard style.
   <br>
   <br>
 </h1>
