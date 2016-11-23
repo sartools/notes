@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://aerobird98.github.io/Page/lib/img/Notes.svg"><img src="https://aerobird98.github.io/Page/lib/img/Notes.svg" alt="Notes" width="100"></a>
+  <a href="https://aerobird98.github.io/Page/lib/img/Notes-Cover.svg"><img src="https://aerobird98.github.io/Page/lib/img/Notes-Cover.svg" alt="Notes" width="200"></a>
   <br>
   Notes
   <br>
