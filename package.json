@@ -1,7 +1,7 @@
 {
   "name": "notes-text",
   "productName": "Notes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "app.js",
   "license": "MIT",
   "repository": "Aerobird98/Notes",
@@ -15,8 +15,8 @@
     "pack-all": "electron-packager . Notes --appname=Notes --app-version=1.0.1 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=icon.ico --overwrite"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.4.8",
-    "electron-packager": "8.3.0",
-    "standard": "8.5.0"
+    "electron-prebuilt": "1.4.13",
+    "electron-packager": "8.5.1",
+    "standard": "8.6.0"
   }
 }
