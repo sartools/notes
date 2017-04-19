@@ -2,7 +2,7 @@
   <br>
   <a href="https://aerobird98.github.io/page/lib/img/notes-cover.svg"><img src="https://aerobird98.github.io/page/lib/img/notes-cover.svg" alt="notes" width="200"></a>
   <br>
-  Notes
+  notes
   <br>
   <br>
   a simple plain text editor written in js standard style.
