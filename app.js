@@ -2,7 +2,6 @@ const electron = require('electron')
 const {app, BrowserWindow} = electron
 const path = require('path')
 const url = require('url')
-// title: 'notes - '.concat(path.basename('index.html'))
 
 let win
 
