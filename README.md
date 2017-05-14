@@ -1,11 +1,15 @@
-<h1 align="center">
-  <br>
-  <a href="https://aerobird98.github.io/page/lib/img/notes-cover.svg"><img src="https://aerobird98.github.io/page/lib/img/notes-cover.svg" alt="notes" width="200"></a>
-  <br>
-  notes
-  <br>
-  <br>
-  a simple plain text editor written in js standard style.
-  <br>
-  <br>
-</h1>
+# notes
+
+notes is a simple text editor builded with the **awesome** <a href="https://electron.atom.io/">electron</a> framework, used only JavaScript (<a href="https://github.com/feross/standard">standard</a>), html and css code.
+This repo also serves as a template for my electron projects.
+
+# Features (...)
+
+It's features basic plain text editing, copy, paste or cutting out text.
+
+## Contributing (...)
+
+Feel free to fork and open a pull request or submit a bug, etc...
+
+# License
+notes is licensed under the [MIT license](https://raw.githubusercontent.com/Aerobird98/notes/master/LICENSE.txt).

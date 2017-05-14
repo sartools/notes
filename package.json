@@ -1,22 +1,22 @@
 {
   "name": "notes-text",
-  "productName": "Notes",
-  "version": "1.0.2",
+  "productName": "notes",
+  "version": "2.0.0",
   "main": "app.js",
   "license": "MIT",
-  "repository": "Aerobird98/Notes",
+  "repository": "Aerobird98/notes",
 
   "scripts": {
     "start": "electron app.js",
     "std": "standard",
 
-    "pack-64bit": "electron-packager . Notes --appname=Notes --app-version=1.0.1 --app-copyright=Github --platform=win32 --arch=x64 --prune --asar --icon=icon.ico --overwrite",
-    "pack-32bit": "electron-packager . Notes --appname=Notes --app-version=1.0.1 --app-copyright=Github --platform=win32 --arch=ia32 --prune --asar --icon=icon.ico --overwrite",
-    "pack-all": "electron-packager . Notes --appname=Notes --app-version=1.0.1 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=icon.ico --overwrite"
+    "pack-64bit": "electron-packager . notes --appname=notes --app-version=2.0.0 --app-copyright=Github --platform=win32 --arch=x64 --prune --asar --icon=icon.ico --overwrite",
+    "pack-32bit": "electron-packager . notes --appname=notes --app-version=2.0.0 --app-copyright=Github --platform=win32 --arch=ia32 --prune --asar --icon=icon.ico --overwrite",
+    "pack-all": "electron-packager . notes --appname=notes --app-version=2.0.0 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=icon.ico --overwrite"
   },
   "devDependencies": {
-    "electron-prebuilt": "1.4.13",
-    "electron-packager": "8.5.1",
-    "standard": "8.6.0"
+    "electron": "1.6.7",
+    "electron-packager": "8.7.0",
+    "standard": "10.0.2"
   }
 }
