@@ -14,6 +14,11 @@
     "pack-32bit": "electron-packager . notes --appname=notes --app-version=2.0.0 --app-copyright=Github --platform=win32 --arch=ia32 --prune --asar --icon=icon.ico --overwrite",
     "pack-all": "electron-packager . notes --appname=notes --app-version=2.0.0 --app-copyright=Github --platform=win32 --arch=all --prune --asar --icon=icon.ico --overwrite"
   },
+  "standard": {
+    "ignore": [
+      "behave.js"
+    ]
+  },
   "devDependencies": {
     "electron": "1.6.7",
     "electron-packager": "8.7.0",

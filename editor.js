@@ -1,9 +1,10 @@
 const electron = require('electron')
 const {dialog, Menu} = electron.remote
-const fs = require('fs')
 const path = require('path')
+const fs = require('fs')
 
 let filepath = 'untitled'
+let title = 'notes' + ' - '
 
 let template = [
   {
@@ -81,23 +82,21 @@ let template = [
         role: 'togglefullscreen'
       },
       {
-        label: 'Developer',
-        submenu: [
-          {
-            label: 'Reload',
-            accelerator: 'Alt+CmdOrCtrl+R',
-            click (item, focusedWindow) {
-              if (focusedWindow) focusedWindow.reload()
-            }
-          },
-          {
-            label: 'Toggle Developer Tools',
-            accelerator: 'Alt+CmdOrCtrl+I',
-            click (item, focusedWindow) {
-              if (focusedWindow) focusedWindow.webContents.toggleDevTools()
-            }
-          }
-        ]
+        type: 'separator'
+      },
+      {
+        label: 'Toggle Developer Tools',
+        accelerator: 'CmdOrCtrl+Shift+I',
+        click (item, focusedWindow) {
+          if (focusedWindow) focusedWindow.webContents.toggleDevTools()
+        }
+      },
+      {
+        label: 'Reload',
+        accelerator: 'CmdOrCtrl+Shift+R',
+        click (item, focusedWindow) {
+          if (focusedWindow) focusedWindow.reload()
+        }
       }
     ]
   }
@@ -107,33 +106,37 @@ const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 
 const editor = document.getElementById('editor')
-// editor.contentEditable = true
 
 window.onload = () => {
+  settitle(title, filepath)
+  const behave = new Behave({
+    textarea: editor,
+    replaceTab: true,
+    softTabs: true,
+    tabSize: 2,
+    autoOpen: true,
+    overwrite: true,
+    autoStrip: true,
+    autoIndent: true,
+    fence: false
+  })
   editor.focus()
 }
-
-editor.addEventListener('keydown', (e) => {
-  // preventing default tab functionality
-  if (e.keyCode === 9) {
-    e.preventDefault()
-  }
-})
 
 function newfile () {
   if (filepath !== 'untitled') {
     filepath = 'untitled'
-    updatetitle('notes - ', filepath)
-    editor.value = ''
+    settitle(title, filepath)
   }
+  editor.value = ''
 }
 
 function openfile () {
-  dialog.showOpenDialog({ filters: [{ name: 'plain text(.txt)', extensions: ['txt'] }, { name: 'all(*)', extensions: ['*'] }] }, (file) => {
-    if (file === undefined) return
-    fs.readFile(file[0], (err, data) => {
+  dialog.showOpenDialog({ filters: [{ name: 'plain text(.txt)', extensions: ['txt'] }, { name: 'all(*)', extensions: ['*'] }] }, (f) => {
+    if (f === undefined) return
+    fs.readFile(f[0], (err, data) => {
       editor.value = data.toString()
-      updatetitle('notes - ', file)
+      settitle(title, f)
       if (err) {
         dialog.showErrorBox('error', err.message)
       }
@@ -154,10 +157,10 @@ function save () {
 }
 
 function saveas () {
-  dialog.showSaveDialog({ filters: [{ name: 'plain text(.txt)', extensions: ['txt'] }, { name: 'other(*)', extensions: ['*'] }] }, (file) => {
-    if (file === undefined) return
-    fs.writeFile(file, editor.value, (err) => {
-      updatetitle('notes - ', file)
+  dialog.showSaveDialog({ filters: [{ name: 'plain text(.txt)', extensions: ['txt'] }, { name: 'other(*)', extensions: ['*'] }] }, (f) => {
+    if (f === undefined) return
+    fs.writeFile(f, editor.value, (err) => {
+      settitle(title, f)
       if (err) {
         dialog.showErrorBox('error', err.message)
       }
@@ -165,7 +168,7 @@ function saveas () {
   })
 }
 
-function updatetitle (title, file) {
-  filepath = file.toString()
-  document.getElementById('title').textContent = title.concat(path.basename(filepath))
+function settitle (t, f) {
+  filepath = f.toString()
+  document.getElementById('title').textContent = t + path.basename(filepath)
 }

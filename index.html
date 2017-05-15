@@ -2,12 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title id="title">notes - untitled</title>
+    <title id="title"></title>
     <style>
-      @font-face {
-        font-family: "Anonymous Pro";
-        src:url("AnonymousPro-Regular.ttf"),
-      }
       html, body {
         overflow:hidden;
         width:100%;
@@ -18,13 +14,13 @@
       #editor {
         overflow-y:scroll;
         overflow-x:scroll;
-        overflow-wrap: normal;
+        overflow-wrap:normal;
         resize:none;
         border:none;
         outline:none;
         white-space:pre;
-
-        font:22px 'Anonymous Pro', monospace;
+        font:22px monospace; /*font:22px 'late',sans-serif*/
+        color:#000;
         width:100%;
         height:100%;
         margin:0;
@@ -34,6 +30,7 @@
   </head>
   <body>
     <textarea id="editor"></textarea>
+    <script src="behave.js"></script>
     <script src="editor.js"></script>
   </body>
 </html>
