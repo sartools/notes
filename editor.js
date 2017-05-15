@@ -106,20 +106,26 @@ const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 
 const editor = document.getElementById('editor')
+const behave = new Behave({
+  textarea: editor,
+  replaceTab: true,
+  softTabs: true,
+  tabSize: 2,
+  autoOpen: true,
+  overwrite: true,
+  autoStrip: true,
+  autoIndent: true,
+  fence: false
+})
+
+/*editor.addEventListener('keydown', (e) => {
+  if (e.keyCode === 9) {
+    e.preventDefault()
+  }
+})*/
 
 window.onload = () => {
   settitle(title, filepath)
-  const behave = new Behave({
-    textarea: editor,
-    replaceTab: true,
-    softTabs: true,
-    tabSize: 2,
-    autoOpen: true,
-    overwrite: true,
-    autoStrip: true,
-    autoIndent: true,
-    fence: false
-  })
   editor.focus()
 }
 
