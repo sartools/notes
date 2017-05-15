@@ -6,7 +6,7 @@ This repo also serves as a template for my electron projects.
 # Features (...)
 
 * It's features basic plain text editing, copy, paste or cutting out text
-* Supports code edditing without syntax highlight (thanks to <a href="http://jakiestfu.github.io/Behave.js/">behave.js</a>):
+* Supports code editing without syntax highlight (thanks to <a href="http://jakiestfu.github.io/Behave.js/">behave.js</a>):
   * Hard and Soft Tabs
   * Auto Open/Close Parenthesis, Brackets, Braces, Double and Single Quotes
   * Auto delete a paired character
